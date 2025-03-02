@@ -253,6 +253,12 @@
   a {
     text-decoration: none;
   }
+  a:active {
+    color: white;
+  }
+  a:visited {
+    color: white;
+  }
   .nav_bar {
     display: flex;
     justify-content: space-between;
