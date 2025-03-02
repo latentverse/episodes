@@ -14,7 +14,7 @@
     padding-right: 30px;
     padding-top: 15px;
     padding-bottom: 10px;
-    background-color: black;
+    background-color: #010100;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,6 +23,13 @@
   }
   .logo_main {
     height: 60px;
+  }
+  .nav_item {
+    cursor: pointer;
+    transition: color 0.5s;
+  }
+  .nav_item:hover {
+    color: #eeff04;
   }
   .buttons {
     margin-top: 100px;
@@ -267,7 +274,7 @@
     padding-left: 18px;
     padding-right: 18px;
     padding-bottom: 12px;
-    background-color: black;
+    background-color: #010100;
     position: fixed;
     top: 0;
     left: 0;
