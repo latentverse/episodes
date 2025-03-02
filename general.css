@@ -429,4 +429,15 @@
   .video_page .video_left .button2 {
     display: none;
   }
+  .disclaimer_contact {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 500;
+    color: #eeff04;
+    margin-bottom: 10px;
+  }
+  .disclaimer_credit {
+    opacity: 0.9;
+    color: white;
+  }
 }
