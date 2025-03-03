@@ -8,12 +8,12 @@
   }
   .nav_bar {
     display: flex;
-    height: 60px;
+    height: 50px;
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 15px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 12px;
     background-color: #010100;
     position: fixed;
     top: 0;
@@ -23,17 +23,19 @@
   }
   .logo_main {
     height: 60px;
+    align-self: center;
   }
   .nav_item {
     cursor: pointer;
     transition: color 0.5s;
+    align-self: center;
   }
   .nav_item:hover {
     color: #eeff04;
   }
   .buttons {
-    margin-top: 100px;
-    margin-bottom: 20px;
+    margin-top: 80px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -143,6 +145,7 @@
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 10px;
+    margin-bottom: 15px;
     color: #fefeff;
   }
   .read_disclaimer {
@@ -153,6 +156,11 @@
     padding-right: 10px;
     margin-top: 10px;
     color: #fefeff;
+    transition: color 0.1s;
+    display: inline-block;
+  }
+  .read_disclaimer:hover {
+    color: #eeff04;
   }
   .more_ep {
     color: white;
@@ -160,7 +168,7 @@
     margin-bottom: 0;
     margin-top: 0;
     font-weight: 500;
-    padding-top: 12px;
+    padding-top: 14px;
     padding-left: 20px;
     padding-bottom: -10px;
   }
@@ -171,15 +179,15 @@
     padding: 20px;
     gap: 34px;
     flex-direction: row;
-    margin-top: 70px;
+    margin-top: 58px;
   }
   .video_left {
     flex: 3; /* Takes up 75% of the space */
-    max-width: 75%;
+    max-width: 68%;
   }
   .video_right {
     flex: 1;
-    max-width: 25%;
+    max-width: 28%;
     display: flex;
     height: auto;
     align-self: flex-start;
