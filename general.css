@@ -284,10 +284,7 @@
   .nav_bar {
     display: flex;
     justify-content: space-between;
-    padding-top: 12px;
-    padding-left: 18px;
-    padding-right: 18px;
-    padding-bottom: 12px;
+    padding: 12px 18px;
     background-color: #010100;
     position: fixed;
     top: 0;
@@ -334,16 +331,18 @@
     margin-top: 10px;
   }
   .episode_name {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 500;
-    margin-top: 10px;
-    margin-bottom: -5px;
+    margin-top: 8px;
+    margin-bottom: -7px;
   }
   .episode_duration {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    
+  }
+  .time {
+    font-size: 16px;
   }
   .details {
     padding-left: 10px;
