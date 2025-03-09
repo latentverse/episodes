@@ -33,8 +33,17 @@
   .nav_item:hover {
     color: #eeff04;
   }
+  marquee {
+    padding: 10px 0px;
+    margin-top: 58px;
+    color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #eeff04;
+  }
   .buttons {
-    margin-top: 80px;
+    margin-top: 125px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
@@ -302,8 +311,17 @@
     gap: 20px;
     align-items: center;
   }
+  marquee {
+    margin-top: 67px;
+    padding: 5px 0px;
+    color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #eeff04;
+  }
   .buttons {
-    margin-top: 100px;
+    margin-top: 130px;
     margin-bottom: 38px;
     display: flex;
     align-items: center;
