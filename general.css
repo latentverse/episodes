@@ -41,9 +41,11 @@
     left: 0;
     right: 0;
     background-color: #eeff04;
+    display: none;
   }
   .buttons {
-    margin-top: 125px;
+    /* margin value with marqee 125px*/
+    margin-top: 90px;
     margin-bottom: 10px;
     display: flex;
     flex-direction: row;
@@ -319,9 +321,11 @@
     left: 0;
     right: 0;
     background-color: #eeff04;
+    display: none;
   }
   .buttons {
-    margin-top: 130px;
+    /*margin value with marquee 130px*/
+    margin-top: 100px;
     margin-bottom: 38px;
     display: flex;
     align-items: center;
