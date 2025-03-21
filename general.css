@@ -1,18 +1,24 @@
+.banner {
+  width: 100vw;
+}
+
 @media (min-width: 1024px) {
   /* Styles for laptops and desktops */
   body {
+    width: 100%;
     margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
   a {
     text-decoration: none;
   }
-  .nav_bar {
+  .navbar {
     display: flex;
+    max-width: 100%;
     height: 50px;
     justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
+    padding: 10px 35px;
     padding-bottom: 12px;
     background-color: #010100;
     position: fixed;
@@ -20,6 +26,14 @@
     left: 0;
     right: 0;
     z-index: +5;
+    transition: background 0.3s ease-in-out;
+    background: transparent; /* Initially transparent */
+  }
+  .navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9); /* Opaque black */
+  }
+  #navbarr {
+    background: rgba(0, 0, 0, 0.9);
   }
   .logo_main {
     height: 60px;
@@ -45,36 +59,253 @@
   }
   .buttons {
     /* margin value with marqee 125px*/
-    margin-top: 90px;
-    margin-bottom: 10px;
+    margin-top: 35.5vh;
+    margin-bottom: 2.5vh;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
     gap: 15px;
   }
   .allep,.bonusep {
-    padding: 18px 45px;
+    padding: 2.35vh 3.8vw;
+    text-align: center;
+    font-weight: 550;
+    border-radius: 10px;
+    border: none;
+    white-space: nowrap;
     cursor: pointer;
   }
+
+  #buttonss {
+    margin-top: 12vh;
+  }
+
+  .banner {
+      position: relative;
+      margin-top: -15px;
+      margin-left: -15px;
+      margin-right: -15px;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      object-fit: cover;
+      box-shadow: 0px -20px 40px 20px #222323;
+  }
+  .banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Adjust to control blending */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #222323 100%);
+    pointer-events: none;
+}
+
+  #bg-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.95;
+      transition: opacity 0.7s ease-in-out;
+  }
+  .fading {
+    opacity: 0;
+  }
+
+  .overlay {
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #111 100%);
+  }
+
+  .content {
+      position: absolute;
+      bottom: 30vh;
+      left: 4.25vw;
+      margin-left: 0.25vw;
+      color: white;
+      z-index: 2;
+  }
+
+  .content h1 {
+      font-size: 2.6rem;
+      margin: 0;
+  }
+
+  .content p {
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 1vh 0;
+  }
+
+  .content button {
+      padding: 1.52vh 2vw;
+      margin-top: 1.75vh;
+      margin-right: 8px;
+      font-weight: 500;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  .content button a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .play {
+    background: white;
+    color: black;
+  }
+  .play i {
+    color: black;
+    margin-right: 9px;
+  }
+  .moreinfo {
+    background: rgba(109, 109, 110, 0.7); /* Netflix gray */
+    color: white;
+  }
+  .moreinfo i {
+    color: white;
+    margin-right: 9px;
+  }
+  .play:hover {
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+.moreinfo:hover {
+    background: rgba(109, 109, 110, 0.5);
+  }
+  
+
+  /* Exclusive Episodes Section */
+.exclusive-content {
+  position: absolute;
+  bottom: -30vh;
+  left: 0.75vw;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  background: transparent;
+  padding: 20px 36px;
+  margin: 0 22px;
+}
+
+.exclusive-box {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 3.4vh;
+  display: flex;
+  align-items: center;
+}
+
+.new-badge {
+  background: red;
+  color: white;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.exclusive-episodes {
+  display: flex;
+  gap: 20px;
+}
+
+.individual {
+  background-color: #1f1f1e;
+  border-radius: 8px !important;
+  flex: 0 0 auto;
+  overflow: hidden;
+  width: 20vw;
+  transition: all 0.3s ease-in-out;
+}
+
+.individual:hover {
+  transform: scale(1.06);
+  overflow: hidden;
+  border-radius: 8px !important;
+}
+
+.individual a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.individual .thumbnail {
+  border-radius: inherit;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 2px solid red;
+}
+
+.individual .details {
+  padding: 8px;
+  text-align: center;
+}
+
+.individual .episode_number {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.individual .episode_name {
+  margin-top: 2px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #b3b3b3;
+}
+
+.individual .episode_duration {
+  margin-top: -10px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+.individual .episode_duration img {
+  width: 12px;
+}
+
+
+
   .episodes {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     row-gap: 30px;
-    padding: 20px;
+    padding: 20px 40px;
   }
   .indi {
-    width: calc(100% / 3 - 20px);
+    width: calc(100% / 3 - 30px);
     background-color: #1f1f1e;
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-
+    transition: all 0.3s ease-in-out;
     
+  }
+  .indi:hover {
+    transform: scale(1.05);
   }
   .thumbnail {
     width: 100%;
@@ -82,19 +313,26 @@
   .episode_number {
     margin-top: 10px;
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 1.05rem;
     color: #eeff04;
     font-weight: 500;
   }
   .episode_name {
-    font-size: 22px;
+    font-size: 1.25rem;
     margin-top: 10px;
-    margin-bottom: -3px;
+    margin-bottom: 1px;
     font-weight: 500;
+  }
+  .clock {
+    width: 4%;
+  }
+  .time {
+    font-size: 0.85rem;
   }
   .episode_duration {
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    margin-bottom: 10px;
   }
   .details {
     padding: 0 15px;
@@ -122,8 +360,10 @@
   .video_player {
     width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
     border-radius: 10px;
   }
+
   .eplabel {
     color: #1f1f1e;
     background-color: #eeff04;
@@ -212,9 +452,11 @@
     display: flex;
     flex-direction: column;
     gap: 20px; /* Increased spacing */
+    padding: 1.2vw;
   }
   .video_page .video_right .episodes .indi {
     width: 100%; /* Ensures uniform width */
+    background-color: #1a1a1a9f;
   }
 
   .delete {
@@ -271,8 +513,508 @@
   }
 
 }
-@media screen and (max-width: 768px) {
+@media (min-width: 480px) and (max-width: 1024px) {
+  html body {
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    box-sizing: border-box;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:active {
+    color: white;
+  }
+  a:visited {
+    color: white;
+  }
+  .navbar {
+    display: flex;
+    height: 45px;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: +5;
+  }
+  #navbarr {
+    background: rgba(0, 0, 0, 0.9);;
+  }
+  .navbar.scrolled {
+    background: rgba(0, 0, 0, 0.9); /* Opaque black */
+  }
+  .logo_main {
+    height: 50px;
+    align-self: center;
+  }
+  .nav_item {
+    cursor: pointer;
+    transition: color 0.5s;
+    align-self: center;
+    font-size: 16px;
+  }
+  .nav_item:hover {
+    color: #eeff04;
+  }
+  marquee {
+    padding: 11px 0px;
+    margin-top: 58px;
+    color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #eeff04;
+    display: none;
+  }
+  .buttons {
+    /* margin value with marqee 125px*/
+    margin-top: 23vh;
+    margin-bottom: 1.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+  }
+  #buttonss {
+    margin-top: 6.25vh;
+    margin-bottom: 1.2vh;
+  }
+  .allep,.bonusep {
+    padding: 18px 45px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .banner {
+    position: relative;
+    margin-top: -15px;
+    margin-left: -15px;
+    margin-right: -15px;
+    width: 100vw;
+    height: 50vh;
+    overflow: hidden;
+    object-fit: cover;
+    box-shadow: 0px -20px 40px 20px #222323;
+  }
+  .banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%; /* Adjust to control blending */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #222323 100%);
+    pointer-events: none;
+  }
+  #bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.95;
+    transition: opacity 0.7s ease-in-out;
+  }
+  .fading {
+    opacity: 0;
+  }
+  .overlay {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #111 100%);
+  }
+
+  .content {
+      position: absolute;
+      bottom: 8vh;
+      left: 4.25vw;
+      margin-left: 2px;
+      color: white;
+      z-index: 2;
+  }
+
+  .content h1 {
+      font-size: 2.5rem;
+      margin: 0;
+  }
+
+  .content p {
+      font-size: 1.1rem;
+      max-width: 500px;
+      margin: 0.5vh 0;
+  }
+
+  .content button {
+      padding: 1vh 2.25vw;
+      margin-top: 1.5vh;
+      margin-right: 8px;
+      font-weight: 500;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  .content button a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .play {
+    background: white;
+    color: black;
+  }
+  .play i {
+    color: black;
+    margin-right: 9px;
+  }
+  .moreinfo {
+    background: rgba(109, 109, 110, 0.7); /* Netflix gray */
+    color: white;
+  }
+  .moreinfo i {
+    color: white;
+    margin-right: 9px;
+  }
+  .play:hover {
+    background: rgba(255, 255, 255, 0.85);
+  }
+
+  .moreinfo:hover {
+    background: rgba(109, 109, 110, 0.5);
+  }
+
+   /* Exclusive Episodes Section */
+  .exclusive-content {
+    position: absolute;
+    bottom: 28vh;
+    left: 0;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    background: transparent;
+    padding: 2vh 2vw;
+    margin: 0 22px;
+  }
+
+  .exclusive-box {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 2.4vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .new-badge {
+    background: red;
+    color: white;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+  }
+
+  .exclusive-episodes {
+    display: flex;
+    gap: 20px;
+  }
+
+  .individual {
+    background-color: #1f1f1e;
+    border-radius: 8px !important;
+    flex: 0 0 auto;
+    overflow: hidden;
+    width: 20vw;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .individual:hover {
+    transform: scale(1.06);
+    overflow: hidden;
+    border-radius: 8px !important;
+  }
+
+  .individual a {
+    text-decoration: none;
+    color: white;
+    display: block;
+  }
+
+  .individual .thumbnail {
+    border-radius: inherit;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid red;
+  }
+
+  .individual .details {
+    padding: 6px;
+    text-align: center;
+  }
+
+  .individual .episode_number {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .individual .episode_name {
+    margin-top: 2px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #b3b3b3;
+  }
+
+  .individual .episode_duration {
+    margin-top: -10px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #b3b3b3;
+  }
+
+  .individual .episode_duration img {
+    width: 12px;
+  }
+
+  .episodes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+    gap: 21.5px;
+    padding: 20px 0;
+  }
+  .indi {
+    width: calc(100% / 3 - 35px);
+    background-color: #1f1f1e;
+    border-radius: 14px;
+    overflow: hidden; 
+  }
+  .thumbnail {
+    width: 100%;
+  }
+  .episode_number {
+    margin-top: 4px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #eeff04;
+    font-weight: 500;
+  }
+  .episode_name {
+    font-size: 16px;
+    margin-top: 4px;
+    margin-bottom: -3px;
+    font-weight: 500;
+  }
+  .episode_duration {
+    display: flex;
+    margin-top: -6px;
+    align-items: center;
+    gap: 10px;
+  }
+  .time {
+    font-size: 13px;
+  }
+  .details {
+    padding: 0 12px;
+  }
+  .clock {
+    height: 16px;
+  }
+  .main_video {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 10px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    background-color: #1f1f1e;
+  }
+  .video_player {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .allep,.bonusep {
+    padding: 18px 45px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  .eplabel {
+    color: #1f1f1e;
+    background-color: #eeff04;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    margin-left: 6px;
+    margin-right: 10px;
+    display: none;
+  }
+  .video_title {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #f1f0f0;
+  }
+  .video_description {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0.9;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: #fefeff;
+  }
+  .read_disclaimer {
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    color: #fefeff;
+    transition: color 0.1s;
+    display: inline-block;
+  }
+  .read_disclaimer:hover {
+    color: #eeff04;
+  }
+  .more_ep {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 500;
+    padding-top: 14px;
+    padding-left: 1.5vw;
+    padding-bottom: -10px;
+  }
+  .video_page {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75vh 0.5vw;
+    gap: 20px;
+    margin-top: 58px;
+  }
+  .video_left {
+    flex: 3; /* Takes up 75% of the space */
+    max-width: 68%;
+  }
+  .video_right {
+    flex: 1;
+    max-width: 28%;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    background-color: #1f1f1e;
+    border-radius: 10px;
+  }
+  .video_page .episodes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased spacing */
+    padding: 1.2vw;
+  }
+  .video_page .video_right .episodes .indi {
+    width: 100%; /* Ensures uniform width */
+    background-color: #1a1a1a9f;
+  }
+
+  .delete {
+    display: none;
+  }
+  .disclaimer_text {
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #1f1f1e;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 90px auto; /* Keeps 100px margin but avoids extra height */
+    min-height: 55vh; /* Adjust this to control vertical space */
+    background-color: #1f1f1e;
+    padding: 15px;
+    border-radius: 10px;
  
+  }
+  .disclaimer_head {
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #1f1f1e;
+    background-color: #eeff04;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .disclaimer_body {
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+  a:active {
+    color: white;
+  }
+  a:visited {
+    color: white;
+  }
+  .disclaimer_contact {
+    font-size: 25px;
+    font-weight: 500;
+    color: #eeff04;
+    margin-bottom: 10px;
+  }
+  .disclaimer_credit {
+    opacity: 0.9;
+    color: white;
+  }
+  footer {
+    color: #fefeff; 
+    text-decoration: none; 
+    text-align: center; 
+    font-size: 15px;
+    position: relative;
+    bottom: 0;
+    padding-bottom: 2.5vh;
+  }
 }
 
 /* Tablets (768px and below) */
@@ -292,11 +1034,12 @@
   a:visited {
     color: white;
   }
-  .nav_bar {
+  .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 12px 18px;
+    padding: 10px 18px;
     background-color: #010100;
+    height: 6vh;
     position: fixed;
     top: 0;
     left: 0;
@@ -323,52 +1066,120 @@
     background-color: #eeff04;
     display: none;
   }
+
+  .banner {
+    display: none;
+  }
+  .exclusive-content {
+    margin-top: 95px;
+    margin-bottom: 10px;
+  }
+  .exclusive-box {
+    position: relative;
+    background: yellow;
+    padding: 10px 20px;
+    font-weight: 550;
+    text-align: center;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 2px;
+    margin-bottom: 15px;
+    margin-top: -2vh;
+}
+
+.new-badge {
+    position: absolute;
+    top: -12px; /*orignal 5px*/
+    right: -11px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+  .exclusive-episodes {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto; /* Allows scrolling */
+    margin-left: -15px; /* Adjust based on body padding */
+    margin-right: -15px;
+    padding: 10px 16px;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    padding-bottom: 10px;
+  }
+  .exclusive-episodes::-webkit-scrollbar {
+    display: none;
+}
+  .individual {
+    flex: 0 0 355px; /* Wider cards */
+    background: #1f1f1e;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+  }
   .buttons {
     /*margin value with marquee 130px*/
-    margin-top: 100px;
-    margin-bottom: 38px;
+    max-width: 90%;
     display: flex;
+    gap: 10px;
     align-items: center;
-    max-width: 370px;
-    justify-content: space-between;
-    gap: 5px;
-    padding-left: 4px;
-    padding-right: 4px;
+    justify-content: center;
+    margin: 28px auto;
+  }
+  #buttonss {
+    margin-top: 9vh;
+    margin-bottom: 2.25vh;
+  }
+  .bonusep, .allep {
+    flex: 1;
+    font-size: 1rem;
+    padding: 1.7vh 6.75vw;
+    text-align: center;
+    font-weight: 550;
+    border-radius: 10px;
+    border: none;
+    white-space: nowrap;
+  }
+  .video_page .buttons {
+    display: none;
   }
   .indi {
-    width: 370px;
     background-color: #1f1f1e;
     border-radius: 14px;
     overflow: hidden;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
   }
   .thumbnail {
-    width: 100%;
+    width: 100% !important;
   }
   .episode_number {
-    font-size: 18px;
-    color: #eeff04;
-    font-weight: 500;
-    margin-bottom: 0;
-    margin-top: 10px;
+    font-size: 18px !important;
+    color: #eeff04 !important;
+    font-weight: 500 !important;
+    margin-bottom: 0 !important;
+    margin-top: 10px !important;
   }
   .episode_name {
-    font-size: 20px;
-    font-weight: 500;
-    margin-top: 8px;
-    margin-bottom: -7px;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    margin-top: 8px !important;
+    margin-bottom: -7px !important;
   }
   .episode_duration {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 10px !important;
   }
   .time {
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .details {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
   .main_video {
     width: 100%;
@@ -431,12 +1242,12 @@
     color: #fefeff;
   }
   .more_ep {
-    font-size: 32px;
+    font-size: 1.88rem;
     margin-top: 25px;
-    margin-bottom: 22px;
+    margin-bottom: 2.1vh;
     font-weight: 500;
     text-align: left;
-    padding-left: 5px;
+    padding-left: 1.48vw;
   }
   footer {
     color: #fefeff; 
@@ -482,5 +1293,12 @@
   .disclaimer_credit {
     opacity: 0.9;
     color: white;
+  }
+  .video_right .episodes {
+    padding: 0 1vw;
+  }
+  .delete .buttons {
+    margin-top: 4vh !important;
+    margin-bottom: 4vh !important;
   }
 }
