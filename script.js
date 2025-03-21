@@ -61,14 +61,14 @@ const videos = [
         infoLink: "disclaimer.html" 
     },
     { 
-        src: "https://www.dropbox.com/scl/fi/ohu15tlhebnn3gslwi0dj/2.mp4?rlkey=dfn6p8ey2eqllrcjwy0iyggeu&st=19gghxqc&dl=0", 
+        src: "https://www.dropbox.com/scl/fi/ohu15tlhebnn3gslwi0dj/2.mp4?rlkey=dfn6p8ey2eqllrcjwy0iyggeu&st=19gghxqc&raw=1", 
         title: "Bonus Episode 01", 
         desc: "Guests Arpit, Bappa, Sahil and Amin join Samay to hilariously critique India's latent talents.", 
         playLink: "episodes/bonus1.html", 
         infoLink: "disclaimer.html" 
     },
     { 
-        src: "https://www.dropbox.com/scl/fi/6542dwpgyvexvdhexbqvd/3.mp4?rlkey=nsw5icb25gltlo7mhmy58vmfw&st=2lleiq65&dl=0", 
+        src: "https://www.dropbox.com/scl/fi/6542dwpgyvexvdhexbqvd/3.mp4?rlkey=nsw5icb25gltlo7mhmy58vmfw&st=2lleiq65&raw=1", 
         title: "Episode 08", 
         desc: "Guests Poonam, Vivek, Sagar, Vidit join Samay to hilariously critique India's latent talents", 
         playLink: "episodes/ep8.html", 
