@@ -191,7 +191,7 @@
 .exclusive-content {
   position: absolute;
   bottom: -30vh;
-  left: 0.75vw;
+  left: 0;
   width: 100vw;
   background: rgba(0, 0, 0, 0.6);
   z-index: 2;
@@ -292,7 +292,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     row-gap: 30px;
     padding: 20px 40px;
   }
