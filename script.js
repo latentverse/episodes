@@ -54,21 +54,21 @@ window.addEventListener("scroll", function() {
 
 const videos = [
     { 
-        src: "https://www.dropbox.com/scl/fi/fn7oej4bw5y9ohmm0nicl/1.mp4?rlkey=rpuha4lory0lngradxhd39kp3&st=3n2jwsec&raw=1", 
+        src: "videos/1.webm", 
         title: "Bonus Episode 06", 
         desc: "Guests Ashish, Ranveer, Jaspreet, Apoorva join Samay to hilariously critique India's latent talents.", 
         playLink: "episodes/bonus6.html", 
         infoLink: "disclaimer.html" 
     },
     { 
-        src: "https://www.dropbox.com/scl/fi/ohu15tlhebnn3gslwi0dj/2.mp4?rlkey=dfn6p8ey2eqllrcjwy0iyggeu&st=19gghxqc&raw=1", 
+        src: "videos/2.webm", 
         title: "Bonus Episode 01", 
         desc: "Guests Arpit, Bappa, Sahil and Amin join Samay to hilariously critique India's latent talents.", 
         playLink: "episodes/bonus1.html", 
         infoLink: "disclaimer.html" 
     },
     { 
-        src: "https://www.dropbox.com/scl/fi/6542dwpgyvexvdhexbqvd/3.mp4?rlkey=nsw5icb25gltlo7mhmy58vmfw&st=2lleiq65&raw=1", 
+        src: "videos/3.webm", 
         title: "Episode 08", 
         desc: "Guests Poonam, Vivek, Sagar, Vidit join Samay to hilariously critique India's latent talents", 
         playLink: "episodes/ep8.html", 
