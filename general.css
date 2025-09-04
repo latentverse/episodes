@@ -342,6 +342,7 @@
     text-decoration: none; 
     text-align: center; 
     font-size: 15px;
+    margin-bottom: 2rem;
   }
   .next_page {
     transition: color 0.5s;
@@ -1256,6 +1257,7 @@
     text-decoration: none; 
     text-align: center; 
     font-size: 14px;
+    margin-bottom: 1.5rem;
   }
   .disclaimer_text {
     margin-top: 80px;
