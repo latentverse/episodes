@@ -162,27 +162,27 @@
     color: inherit;
   }
 
-  .play {
+  .play-button {
     background: white;
     color: black;
   }
-  .play i {
+  .play-button i {
     color: black;
     margin-right: 9px;
   }
-  .moreinfo {
+  .info-button {
     background: rgba(109, 109, 110, 0.7); /* Netflix gray */
     color: white;
   }
-  .moreinfo i {
+  .info-button i {
     color: white;
     margin-right: 9px;
   }
-  .play:hover {
+  .play-button:hover {
     background: rgba(255, 255, 255, 0.85);
   }
 
-.moreinfo:hover {
+.info-button:hover {
     background: rgba(109, 109, 110, 0.5);
   }
   
@@ -675,27 +675,27 @@
     color: inherit;
   }
 
-  .play {
+  .play-button {
     background: white;
     color: black;
   }
-  .play i {
+  .play-button i {
     color: black;
     margin-right: 9px;
   }
-  .moreinfo {
+  .info-button {
     background: rgba(109, 109, 110, 0.7); /* Netflix gray */
     color: white;
   }
-  .moreinfo i {
+  .info-button i {
     color: white;
     margin-right: 9px;
   }
-  .play:hover {
+  .play-button:hover {
     background: rgba(255, 255, 255, 0.85);
   }
 
-  .moreinfo:hover {
+  .info-button:hover {
     background: rgba(109, 109, 110, 0.5);
   }
 
