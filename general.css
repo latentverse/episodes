@@ -1,7 +1,9 @@
 .banner {
   width: 100vw;
 }
-
+marquee a:visited {
+  color: black !important;
+}
 @media (min-width: 1024px) {
   /* Styles for laptops and desktops */
   body {
@@ -51,11 +53,16 @@
     padding: 11px 0px;
     margin-top: 58px;
     color: black;
-    position: absolute;
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
     left: 0;
     right: 0;
     background-color: #eeff04;
-    display: none;
+  }
+  marquee a {
+    color: inherit;
+    text-decoration: underline;
   }
   .buttons {
     /* margin value with marqee 125px*/
@@ -569,11 +576,16 @@
     padding: 11px 0px;
     margin-top: 58px;
     color: black;
-    position: absolute;
+    position: fixed;
+    bottom: 0;
     left: 0;
     right: 0;
     background-color: #eeff04;
-    display: none;
+    /*display: none;*/
+  }
+  marquee a {
+    color: inherit;
+    text-decoration: underline;
   }
   .buttons {
     /* margin value with marqee 125px*/
@@ -1062,13 +1074,17 @@
     margin-top: 67px;
     padding: 7px 0px;
     color: black;
-    position: absolute;
+    position: fixed;
+    bottom: 0;
     left: 0;
     right: 0;
     background-color: #eeff04;
-    display: none;
+    /*display: none;*/
   }
-
+  marquee a {
+    color: inherit;
+    text-decoration: underline;
+  }
   .banner {
     display: none;
   }
