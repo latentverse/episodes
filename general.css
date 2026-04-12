@@ -214,6 +214,7 @@ marquee a:visited {
   margin-bottom: 3.4vh;
   display: flex;
   align-items: center;
+  scroll-snap-type: x mandatory;
 }
 
 .new-badge {
@@ -370,6 +371,20 @@ marquee a:visited {
     height: auto;
     aspect-ratio: 16 / 9;
     border-radius: 10px;
+    border: none;
+  }
+  .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     border: none;
   }
 
@@ -1237,6 +1252,20 @@ marquee a:visited {
     border-radius: 8px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
     
+  }
+  .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
   }
   .video_title {
     font-weight: 600;
