@@ -1,6 +1,9 @@
 .banner {
   width: 100vw;
 }
+marquee {
+  display: none;
+}
 marquee a:visited {
   color: black !important;
 }
